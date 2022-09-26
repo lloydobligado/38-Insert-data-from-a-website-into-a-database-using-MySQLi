@@ -13,15 +13,8 @@
 <body>
     
 <?php
-    $sql = "SELECT * FROM users;"; 
+    $sql = "SINSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('Daniel', 'Nielsen', 'danielnielsen@gmail.com', 'Admin', 'test123');"; 
     $result = mysqli_query($conn, $sql); 
-    $resultCheck = mysqli_num_rows($result);
-
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo $row['user_first'] . $row['user_last'] . $row['user_uid'] . "<br>";
-        }
-    }
 ?>
 
 </body>
